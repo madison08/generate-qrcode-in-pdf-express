@@ -32,7 +32,7 @@ app.get('/generate-qr', async(req, res) => {
     const pdfBytes = await pdfDoc.save();
     await fs.writeFile(outputFilePath, pdfBytes);
 
-    res.send('hello world');
+    res.send('generated ✅');
 });
 
 app.listen('3000', () => {
